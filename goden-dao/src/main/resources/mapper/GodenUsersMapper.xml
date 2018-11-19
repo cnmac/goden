@@ -217,7 +217,7 @@
     </if>
   </update>
 
-  <select id="getUserByID">
+  <select id="getUserByID" resultMap="BaseResultMap">
     select <include refid="Base_Column_List" />
     from goden_users
     where id = #{userId}

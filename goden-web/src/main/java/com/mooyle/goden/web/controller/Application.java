@@ -1,4 +1,4 @@
-package com.mooyle.web.controller;
+package com.mooyle.goden.web.controller;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

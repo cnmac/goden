@@ -1,4 +1,4 @@
-package com.mooyle.web.controller;
+package com.mooyle.goden.web.controller;
 
 public class Greeting {
 

@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
     <!--<classPathEntry location="E:\MySQL\mysql-connector-java-8.0.13.jar"/>-->
-    <classPathEntry location="C:\Users\machi\work\mysql-connector\mysql-connector-java-8.0.13.jar"/>
+    <classPathEntry location="C:\Users\machi\work\mysql-connector\mysql-connector-java-5.1.48.jar"/>
 
     <context id="mooyle_goden_dev" targetRuntime="MyBatis3" defaultModelType="flat">
         <!-- 不会覆盖自定义的方法，自动合并 -->
@@ -14,8 +14,11 @@
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/dev" userId="root"
-                        password="root"/>
+                        connectionURL="jdbc:mysql://youdontkown.com:6161/goden" userId="root"
+                        password="123456">
+            <!--设置为 true 可以获取 tables 信息, 解决生成文件缺少 xxxByPrimaryKey 的问题 -->
+            <property name="useInformationSchema" value="true"/>
+        </jdbcConnection>
 
         <javaModelGenerator targetPackage="com.mooyle.goden.domain.model"
                             targetProject="../goden-domain/src/main/java"/>
@@ -24,7 +27,7 @@
         <javaClientGenerator targetPackage="com.mooyle.goden.dao.mapper" targetProject="../goden-dao/src/main/java"
                              type="XMLMAPPER"/>
 
-        <table tableName="goden_users">
+        <table tableName="goden_user">
         <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
         <!--<table tableName="platform_user">-->

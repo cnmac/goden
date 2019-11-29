@@ -1,8 +1,8 @@
 package com.mooyle.goden.service.user;
 
-import com.mooyle.goden.domain.model.GodenUsers;
+import com.mooyle.goden.domain.model.GodenUser;
 
 public interface UserService {
 
-     GodenUsers getUsers(Long uid);
+     GodenUser getUsers(Long uid);
 }

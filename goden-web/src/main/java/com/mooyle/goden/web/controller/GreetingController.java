@@ -1,14 +1,14 @@
 package com.mooyle.goden.web.controller;
 
-import java.util.concurrent.atomic.AtomicLong;
-
-import com.mooyle.goden.domain.model.GodenUsers;
+import com.mooyle.goden.domain.model.GodenUser;
 import com.mooyle.goden.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 @RequestMapping("/index")
@@ -26,7 +26,7 @@ public class GreetingController {
     }
 
     @GetMapping("/user")
-    public GodenUsers getUser(@RequestParam(value="uid") String uid){
+    public GodenUser getUser(@RequestParam(value="uid") String uid){
         return userService.getUsers(Long.valueOf(uid));
     }
 }
